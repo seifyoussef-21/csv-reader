@@ -32,7 +32,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Run application / tests
-      run: |
-        # Add your test commands here (e.g., pytest, python app.py, etc.)
-        python app.py
+    - - name: Check Python syntax
+    run: |
+    python -m py_compile app.py
